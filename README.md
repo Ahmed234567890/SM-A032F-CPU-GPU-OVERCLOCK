@@ -85,16 +85,16 @@ The packers in `scripts/` always write big-endian.
 
 ```mermaid
 flowchart LR
-  A[boot.img] --> B[Android boot header<br/>kernel + ramdisk]
-  A --> C[DTBO container<br/>at 0x13be000]
-  C --> D[FDT / device tree]
-  D --> E[cpufreq-clus0<br/>little OPP tables]
-  D --> F[cpufreq-clus1<br/>big OPP tables]
-  D --> G[gpu@60000000<br/>OPP + assigned-clock-rates]
-  E --> H[CPU DVFS]
+  A["boot.img"] --> B["Android boot header<br/>kernel + ramdisk"]
+  A --> C["DTBO container<br/>at 0x13be000"]
+  C --> D["FDT / device tree"]
+  D --> E["cpufreq-clus0<br/>little OPP tables"]
+  D --> F["cpufreq-clus1<br/>big OPP tables"]
+  D --> G["gpu@60000000<br/>OPP + assigned-clock-rates"]
+  E --> H["CPU DVFS"]
   F --> H
-  G --> I[GPLL 650 MHz]
-  I --> J[gpu-core / gpu-soc]
+  G --> I["GPLL 650 MHz"]
+  I --> J["gpu-core / gpu-soc"]
 ```
 
 Only the boot partition is touched. `pm_sys`, `sml`, `trustos`, `uboot`, and the

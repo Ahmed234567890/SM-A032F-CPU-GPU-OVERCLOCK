@@ -47,12 +47,12 @@ opp[3/3]: (650000000 Hz, 0 uV)
 
 ```mermaid
 flowchart LR
-  X[ext-26m] --> G[gpll-gate]
-  G --> P[gpll<br/>3 regs @ 0x40353038]
-  T[twpll-153m6 / 192m / 256m<br/>307m2 / 384m / 512m] --> M{GPU clock mux}
+  X["ext-26m"] --> G["gpll-gate"]
+  G --> P["gpll<br/>3 regs @ 0x40353038"]
+  T["twpll-153m6 / 192m / 256m<br/>307m2 / 384m / 512m"] --> M{"GPU clock mux"}
   P --> M
-  M --> C[gpu-core<br/>divider = 1]
-  M --> S[gpu-soc<br/>divider = 1]
+  M --> C["gpu-core<br/>divider = 1"]
+  M --> S["gpu-soc<br/>divider = 1"]
 ```
 
 | Item | Value |
