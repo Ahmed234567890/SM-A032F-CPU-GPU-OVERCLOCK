@@ -1,0 +1,38 @@
+# Boot images, compiled device trees, vendor blobs, and build outputs
+*.img
+*.dtb
+*.dtbo
+*.ko
+*.fw
+*.bin
+*.elf
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tar.zst
+*.tar.xz
+
+# Build / working directories
+build/
+work/
+out/
+__pycache__/
+*.pyc
+*.o
+*.so
+*.a
+*.d
+
+# Logs and benchmark output are ignored by default, except the curated
+# results committed under results/logs/.
+*.log
+!results/logs/*.log
+*.out
+!results/logs/*.out
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*~

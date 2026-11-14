@@ -1,0 +1,34 @@
+RAM STRESS: 8 threads x 16 MiB = 128 MiB total
+mem before: 796 MB available
+ddr max=933 min=160 governor=sprd-governor
+
+ddr before: cur=400 ap=0 cp=400 force=0
+mem after fault-in: 670 MB available
+t=  0.40 ddr= 400 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 65.9 mem=658MB
+t=  0.91 ddr= 400 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 63.2 mem=654MB
+t=  1.42 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 66.8 mem=657MB
+t=  1.92 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 68.5 mem=666MB
+t=  2.43 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 69.4 mem=673MB
+t=  2.94 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 70.3 mem=679MB
+PHASE write start=  1.00 end=  3.01 elapsed=  2.01 s
+t=  3.45 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 73.0 mem=679MB
+t=  3.96 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 74.8 mem=679MB
+t=  4.46 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 75.7 mem=679MB
+t=  4.97 ddr= 933 ap= 933 cp= 400 cpu0=1200000 cpu4=1600000 temp= 77.4 mem=680MB
+PHASE read  start=  3.01 end=  5.02 elapsed=  2.01 s
+t=  6.03 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 77.4 mem=682MB
+t=  6.54 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 78.3 mem=685MB
+PHASE copy  start=  5.02 end=  7.03 elapsed=  2.01 s
+t=  7.05 ddr= 933 ap=   0 cp= 400 cpu0=1200000 cpu4=1600000 temp= 78.3 mem=685MB
+
+===== SUMMARY =====
+phase write:   2.01 s     13.39 GB traffic    6.66 GB/s
+phase read :   2.01 s     11.56 GB traffic    5.74 GB/s
+phase copy :   2.01 s     11.78 GB traffic    5.87 GB/s
+ddr samples=67 min=400 max=933 avg=858.1 MHz
+ddr histogram (MHz:count): 400:8 622:2 800:1 933:56
+ap max=933 cp max=400
+cpu0 max=1200000 cpu4 max=1600000 kHz
+temp min=62.3 max=78.3 end=75.7 C
+mem min=654 MB
+ddr after: cur=400 ap=0 cp=400 force=0

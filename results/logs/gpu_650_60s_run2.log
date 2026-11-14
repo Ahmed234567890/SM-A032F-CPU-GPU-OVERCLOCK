@@ -1,0 +1,75 @@
+GPU: PowerVR Rogue GE8322 | OpenGL ES 3.2 build 1.18@6267915
+EGL 1.5 | pbuffer 1024x1024 | iterations 64 | 60 s load
+gpu before: freq=256000000 governor=simple_ondemand
+ min=256000000 max=650000000 avail=256000000 384000000 650000000
+
+regulators: vddcore=/sys/class/regulator/regulator.2/microvolts vddmem=/sys/class/regulator/regulator.3/microvolts
+baseline 2 s...
+load start
+t=  1.1 frames=10 fps=9.4 gpu=650000000 temp_gpu=54.4 temp_cpu=50.7 vcore=900000
+t=  2.2 frames=19 fps=8.8 gpu=650000000 temp_gpu=54.4 temp_cpu=57.8 vcore=900000
+t=  3.2 frames=28 fps=8.7 gpu=650000000 temp_gpu=55.3 temp_cpu=53.4 vcore=900000
+t=  4.3 frames=37 fps=8.7 gpu=650000000 temp_gpu=55.3 temp_cpu=52.5 vcore=900000
+t=  5.3 frames=46 fps=8.7 gpu=650000000 temp_gpu=54.4 temp_cpu=51.6 vcore=900000
+t=  6.4 frames=55 fps=8.6 gpu=650000000 temp_gpu=54.4 temp_cpu=53.4 vcore=900000
+t=  7.4 frames=64 fps=8.6 gpu=650000000 temp_gpu=54.4 temp_cpu=51.6 vcore=900000
+t=  8.5 frames=73 fps=8.6 gpu=650000000 temp_gpu=54.4 temp_cpu=50.7 vcore=900000
+t=  9.5 frames=82 fps=8.6 gpu=650000000 temp_gpu=53.5 temp_cpu=49.8 vcore=900000
+t= 10.5 frames=91 fps=8.6 gpu=650000000 temp_gpu=53.5 temp_cpu=49.8 vcore=900000
+t= 11.6 frames=100 fps=8.6 gpu=650000000 temp_gpu=53.5 temp_cpu=50.7 vcore=900000
+t= 12.6 frames=109 fps=8.6 gpu=650000000 temp_gpu=53.5 temp_cpu=50.7 vcore=900000
+t= 13.7 frames=118 fps=8.6 gpu=650000000 temp_gpu=53.5 temp_cpu=55.2 vcore=900000
+t= 14.8 frames=126 fps=8.5 gpu=650000000 temp_gpu=55.3 temp_cpu=58.7 vcore=900000
+t= 15.8 frames=134 fps=8.5 gpu=650000000 temp_gpu=56.2 temp_cpu=60.5 vcore=900000
+t= 16.9 frames=142 fps=8.4 gpu=650000000 temp_gpu=57.1 temp_cpu=59.6 vcore=900000
+t= 18.0 frames=151 fps=8.4 gpu=650000000 temp_gpu=57.1 temp_cpu=57.0 vcore=900000
+t= 19.0 frames=160 fps=8.4 gpu=650000000 temp_gpu=57.1 temp_cpu=61.4 vcore=900000
+t= 20.1 frames=167 fps=8.3 gpu=650000000 temp_gpu=58.0 temp_cpu=64.1 vcore=900000
+t= 21.2 frames=175 fps=8.3 gpu=650000000 temp_gpu=58.0 temp_cpu=65.9 vcore=900000
+t= 22.2 frames=181 fps=8.1 gpu=650000000 temp_gpu=59.9 temp_cpu=60.5 vcore=900000
+t= 23.2 frames=185 fps=8.0 gpu=650000000 temp_gpu=59.0 temp_cpu=57.0 vcore=900000
+t= 24.3 frames=194 fps=8.0 gpu=650000000 temp_gpu=58.0 temp_cpu=54.3 vcore=900000
+t= 25.3 frames=203 fps=8.0 gpu=650000000 temp_gpu=57.1 temp_cpu=52.5 vcore=900000
+t= 26.3 frames=212 fps=8.1 gpu=650000000 temp_gpu=56.2 temp_cpu=52.5 vcore=900000
+t= 27.4 frames=221 fps=8.1 gpu=650000000 temp_gpu=55.3 temp_cpu=54.3 vcore=900000
+t= 28.4 frames=229 fps=8.1 gpu=650000000 temp_gpu=56.2 temp_cpu=59.6 vcore=900000
+t= 29.4 frames=237 fps=8.1 gpu=650000000 temp_gpu=57.1 temp_cpu=61.4 vcore=900000
+t= 30.4 frames=245 fps=8.0 gpu=650000000 temp_gpu=58.0 temp_cpu=62.3 vcore=900000
+t= 31.5 frames=253 fps=8.0 gpu=650000000 temp_gpu=58.0 temp_cpu=62.3 vcore=900000
+t= 32.5 frames=261 fps=8.0 gpu=650000000 temp_gpu=59.0 temp_cpu=64.1 vcore=900000
+t= 33.6 frames=269 fps=8.0 gpu=650000000 temp_gpu=59.9 temp_cpu=65.0 vcore=900000
+t= 34.6 frames=277 fps=8.0 gpu=650000000 temp_gpu=59.9 temp_cpu=65.0 vcore=900000
+t= 35.7 frames=286 fps=8.0 gpu=650000000 temp_gpu=59.9 temp_cpu=57.8 vcore=900000
+t= 36.7 frames=295 fps=8.0 gpu=650000000 temp_gpu=59.0 temp_cpu=55.2 vcore=900000
+t= 37.7 frames=304 fps=8.1 gpu=650000000 temp_gpu=57.1 temp_cpu=54.3 vcore=900000
+t= 38.8 frames=313 fps=8.1 gpu=650000000 temp_gpu=57.1 temp_cpu=53.4 vcore=900000
+t= 39.8 frames=322 fps=8.1 gpu=650000000 temp_gpu=56.2 temp_cpu=53.4 vcore=900000
+t= 40.9 frames=331 fps=8.1 gpu=650000000 temp_gpu=56.2 temp_cpu=56.1 vcore=900000
+t= 41.9 frames=340 fps=8.1 gpu=650000000 temp_gpu=55.3 temp_cpu=52.5 vcore=900000
+t= 43.0 frames=349 fps=8.1 gpu=650000000 temp_gpu=55.3 temp_cpu=52.5 vcore=900000
+t= 44.0 frames=358 fps=8.1 gpu=650000000 temp_gpu=55.3 temp_cpu=52.5 vcore=900000
+t= 45.0 frames=367 fps=8.2 gpu=650000000 temp_gpu=55.3 temp_cpu=52.5 vcore=900000
+t= 46.1 frames=376 fps=8.2 gpu=650000000 temp_gpu=55.3 temp_cpu=54.3 vcore=900000
+t= 47.1 frames=385 fps=8.2 gpu=650000000 temp_gpu=55.3 temp_cpu=51.6 vcore=900000
+t= 48.2 frames=394 fps=8.2 gpu=650000000 temp_gpu=54.4 temp_cpu=55.2 vcore=900000
+t= 49.3 frames=403 fps=8.2 gpu=650000000 temp_gpu=55.3 temp_cpu=52.5 vcore=900000
+t= 50.4 frames=412 fps=8.2 gpu=650000000 temp_gpu=55.3 temp_cpu=58.7 vcore=900000
+t= 51.5 frames=420 fps=8.2 gpu=650000000 temp_gpu=57.1 temp_cpu=63.2 vcore=900000
+t= 52.5 frames=427 fps=8.1 gpu=650000000 temp_gpu=58.0 temp_cpu=63.2 vcore=900000
+t= 53.6 frames=435 fps=8.1 gpu=650000000 temp_gpu=59.0 temp_cpu=63.2 vcore=900000
+t= 54.7 frames=444 fps=8.1 gpu=650000000 temp_gpu=59.0 temp_cpu=57.0 vcore=900000
+t= 55.7 frames=453 fps=8.1 gpu=650000000 temp_gpu=58.0 temp_cpu=54.3 vcore=900000
+t= 56.7 frames=462 fps=8.1 gpu=650000000 temp_gpu=57.1 temp_cpu=54.3 vcore=900000
+t= 57.9 frames=471 fps=8.1 gpu=650000000 temp_gpu=56.2 temp_cpu=56.1 vcore=900000
+t= 58.9 frames=480 fps=8.2 gpu=650000000 temp_gpu=56.2 temp_cpu=54.3 vcore=900000
+t= 59.9 frames=489 fps=8.2 gpu=650000000 temp_gpu=55.3 temp_cpu=52.5 vcore=900000
+load end: 60.0 s, 489 frames, 8.15 fps
+
+===== SUMMARY =====
+samples=578
+gpu freq: min=256000000 max=650000000 avg=634.3 MHz
+gpu temp: min=51.7 max=59.9 C
+vddcore: min=900000 max=900000 uV
+ddr freq: min=400 max=933 MHz
+gpu after: freq=650000000 governor=simple_ondemand
+

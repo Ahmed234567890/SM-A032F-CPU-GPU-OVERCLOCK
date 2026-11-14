@@ -1,0 +1,18 @@
+mode=single threads=1 duration_s=3.000 requested_iters=100000000 total_iters=149000000
+wall_s=3.027162 process_cpu_s=3.000769 throughput_mips=49.221
+checksum=8e59c5de
+pin_map: t0=cpu4
+thread0 cpu=4 iters=149000000 wall_s=3.018258 cpu_s=2.992386 mips=49.366 checksum=8e59c5de
+temp_millic before=43585 after=46258
+vddcpu_uv before=1250000 after=1250000
+procstat user=19.9% nice=0.0% sys=5.2% idle=73.2% iow=0.0% irq=1.2% sirq=0.5% steal=0.0%
+freq cpu0 avg_mhz=1600.0 1600000:100%
+freq cpu1 avg_mhz=1600.0 1600000:100%
+freq cpu2 avg_mhz=1600.0 1600000:100%
+freq cpu3 avg_mhz=1600.0 1600000:100%
+freq cpu4 avg_mhz=2000.0 2000000:100%
+freq cpu5 avg_mhz=2000.0 2000000:100%
+freq cpu6 avg_mhz=2000.0 2000000:100%
+freq cpu7 avg_mhz=2000.0 2000000:100%
+freq_cluster big_avg_mhz=2000.0
+RESULT mode=single threads=1 wall_s=3.027162 total_iters=149000000 throughput_mips=49.221 checksum=8e59c5de

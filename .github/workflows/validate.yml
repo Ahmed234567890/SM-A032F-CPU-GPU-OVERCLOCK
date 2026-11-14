@@ -1,0 +1,76 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Python syntax
+        run: python3 -m py_compile scripts/*.py
+
+      - name: Shell syntax
+        run: |
+          for script in scripts/*.sh; do
+            bash -n "$script"
+          done
+
+      - name: GPLL register check
+        run: python3 scripts/gpll_regs.py --check
+
+      - name: C syntax
+        run: |
+          gcc -O2 -pthread -fsyntax-only scripts/cpu_bench.c
+          gcc -O2 -pthread -fsyntax-only scripts/gpu_stress.c
+          gcc -O3 -pthread -fsyntax-only scripts/ram_stress.c
+
+  public-tree:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Reject oversized binary artifacts
+        run: |
+          found=$(find . -path ./.git -prune -o -type f -size +1M -print)
+          if [ -n "$found" ]; then
+            echo "unexpected large files (boot/kernel/firmware blobs are not allowed):"
+            echo "$found"
+            exit 1
+          fi
+
+      - name: Reject private identifiers and credentials
+        run: |
+          if grep -RInE \
+            --exclude-dir=.git \
+            '192\.168\.[0-9]+\.[0-9]+|\b10\.[0-9]+\.[0-9]+\.[0-9]+\b|\b172\.(1[6-9]|2[0-9]|3[01])\.[0-9]+\.[0-9]+\b|u0_a[0-9]+|/home/[a-z]|BEGIN (OPENSSH|RSA|EC|DSA) PRIVATE KEY|[A-Za-z0-9._%+-]+@gmail\.com' \
+            .; then
+            echo "private identifier or credential pattern found"
+            exit 1
+          fi
+
+      - name: Reject boot images and vendor blobs by extension
+        run: |
+          found=$(find . -path ./.git -prune -o -type f \
+            \( -name '*.img' -o -name '*.dtb' -o -name '*.dtbo' -o -name '*.ko' \
+               -o -name '*.fw' -o -name '*.elf' -o -name '*.zip' \) -print)
+          if [ -n "$found" ]; then
+            echo "binary artifact found:"
+            echo "$found"
+            exit 1
+          fi

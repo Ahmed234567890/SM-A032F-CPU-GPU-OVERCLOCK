@@ -1,0 +1,30 @@
+Driver Status:   OK
+
+Device ID: 0:128
+Firmware Status: OK
+Server Errors:   0
+HWR Event Count: 0
+CRR Event Count: 0
+SLR Event Count: 0
+WGP Error Count: 0
+TRP Error Count: 0
+FWF Event Count: 0
+APM Event Count: 18128
+GPU Utilisation: 0%
+                    VM0
+2D    Utilisation:   0% 
+GEOM  Utilisation:   0% 
+3D    Utilisation:   0% 
+CDM   Utilisation:   0% 
+---
+     From  :   To
+           : 256000000 384000000 650000000   time(ms)
+* 256000000:         0         0        62   1597848
+  384000000:        34         0         8      7716
+  650000000:        28        42         0    400524
+Total transition : 174
+---
+650000000
+256000000 384000000 650000000
+---
+47149
